@@ -1,17 +1,7 @@
-# An implementation of RAKE algorithm for Chinese test based on python 3.
-# The algorithm is described in:
-# Rose, S., D. Engel, N. Cramer, and W. Cowley (2010).
-# Automatic keyword extraction from indi-vidual documents.
-# In M. W. Berry and J. Kogan (Eds.), Text Mining: Applications and Theory.unknown: John Wiley and Sons, Ltd.
-
 import re
 import operator
 from math import log
-# for Chinese word segmentation
 import jieba
-
-debug = False
-test = True
 
 def load_text(text_file_path):
 	'''
@@ -154,7 +144,7 @@ if __name__ == '__main__':
 	# original stop words
 	Chinese_stop_words_file = 'Chinese_stop_words.txt'
 	# utf-8 text
-	Chinese_text_file = 'Chinese_text2.txt'
+	Chinese_text_file = 'Chinese_text.txt'
 
 	key_phrases = Rake(Chinese_stop_words_file).run(Chinese_text_file)
 
